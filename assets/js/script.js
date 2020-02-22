@@ -332,13 +332,13 @@ $(document).ready(function () {
       text += $(this).val() + ',';
     });
     text = text.substring(0, text.length - 1);
-    $('#selectedtext').val(text);
+    $('#holdtext').val(text);
   });
 });
 
 //clear text function in texxttarea
 var input = document.querySelector('#clear');
-var textarea = document.querySelector('#selectedtext');
+var textarea = document.querySelector('#holdtext');
 
 input.addEventListener('click', function () {
   textarea.value = '';
