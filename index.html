@@ -2903,11 +2903,11 @@
 						<h4 class="modal-title" id="myModalLabel">This is your note!</h4>
 					</div>
 					<div class="modal-body">
-						<textarea id="selectedtext" placeholder="Selected Checkbox"></textarea>
+						<textarea id="holdtext" placeholder="Selected Checkbox"></textarea>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
-						<button type="button" class="btn btn-default"  onclick="copytxt()">Copy note here!</button>
+						<BUTTON  class="btn btn-default" onClick="ClipBoard();">Copy note here!</BUTTON>
 
 					</div>
 
@@ -2965,7 +2965,16 @@
 
 	</section>
 
+	<SCRIPT LANGUAGE="JavaScript">
 
+		function ClipBoard()
+		{
+		holdtext.innerText = copytext.innerText;
+		Copied = holdtext.createTextRange();
+		Copied.execCommand("Copy");
+		}
+		
+		</SCRIPT>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>
