@@ -344,20 +344,14 @@ input.addEventListener('click', function () {
   textarea.value = '';
 }, false);
 
-function copytxt() {
-  /* Get the text field */
-  var copyText = document.getElementById("selectedtext");
-
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
-
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
-}
+const copyToClipboard = str => {
+  const el = document.createElement('textarea');
+  el.value = str;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+};
 
 //refresh page
 function refreshPage() {
