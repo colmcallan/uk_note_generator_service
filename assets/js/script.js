@@ -25,11 +25,24 @@ $(document).ready(function () {
     $("#pictureq").toggle();
   });
 });
+//SkyQ trouebleshooting picture
+$(document).ready(function () {
+  $("#Qtroubleshtpctr ").click(function () {
+    $("#pictureq").toggle();
+    $("#TROUBLESHOOTQpict").toggle();
+  });
+});
+
 
 //SkyQ nss issue
 $(document).ready(function () {
   $("#nssissue").click(function () {
     $("#signalQ").toggle();
+  });
+});
+$(document).ready(function () {
+  $("#Qtroublesht2").click(function () {
+    $("#TROUBLESHOOTQNSS").toggle();
   });
 });
 
@@ -40,37 +53,45 @@ $(document).ready(function () {
   });
 });
 
+//Q recording troubleshoot
+$(document).ready(function () {
+  $("#Qtroublesht3").click(function () {
+    $("#TROUBLESHOOTQRCRDING").toggle();
+  });
+});
+
 //SkyQ hardware issues
 $(document).ready(function () {
   $("#hrdware").click(function () {
     $("#hardwareissuesq").toggle();
   });
 });
-//SkyQ trouebleshooting
-$(document).ready(function () {
-  $("#Qtroublesht").click(function () {
-    $("#TROUBLESHOOT").toggle();
-  });
-});
-$(document).ready(function () {
-  $("#Qtroublesht2").click(function () {
-    $("#TROUBLESHOOT").toggle();
-  });
-});
-$(document).ready(function () {
-  $("#Qtroublesht3").click(function () {
-    $("#TROUBLESHOOT").toggle();
-  });
-});
+//Sky Q equipmwnt issues
 $(document).ready(function () {
   $("#Qtroublesht4").click(function () {
-    $("#TROUBLESHOOT").toggle();
+    $("#TROUBLESHOOTEQEQUIP").toggle();
   });
 });
+
+
 //HD
 $(document).ready(function () {
   $("#prdctbtnHD").click(function () {
     $("#skyHD1").toggle();
+  });
+});
+
+//HD nss issue
+$(document).ready(function () {
+  $("#nssissuehd").click(function () {
+    $("#nsshd").toggle();
+  });
+});
+
+//HD equipment issue
+$(document).ready(function () {
+  $("#hrdwarehd").click(function () {
+    $("#equipHD").toggle();
   });
 });
 
@@ -81,38 +102,54 @@ $(document).ready(function () {
   });
 });
 
-//HD nss issue
-$(document).ready(function () {
-  $("#nssissuehd").click(function () {
-    $("#nsshd").toggle();
-  });
-});
 //HD recording issue
 $(document).ready(function () {
   $("#recordinghd").click(function () {
     $("#playbackhd").toggle();
   });
 });
-//HD equipment issue
+//HD equipment/ondemand issue
 $(document).ready(function () {
   $("#hrdwarehd").click(function () {
     $("#equipHD").toggle();
   });
 });
-//Troubleshoot HD 
 $(document).ready(function () {
-  $("#troubleShootingHD").click(function () {
+  $("#troubleShootingequip").click(function () {
+    $("#equipHD").hide();
+    $("#TROUBLESHOOTEQUIP").toggle();
+  });
+});
+//HD remote issue
+$(document).ready(function () {
+  $("#remote").click(function () {
+    $("#cntrl").toggle();
+  });
+});
+
+//troubleshooting remote
+$(document).ready(function () {
+  $("#trblshootingcntrl").click(function () {
     $("#TROUBLESHOOTHD").toggle();
   });
 });
+
+//Troubleshoot NSS
 $(document).ready(function () {
-  $("#troubleShootingHD2").click(function () {
-    $("#TROUBLESHOOTHD").toggle();
+  $("#troubleShootingnss").click(function () {
+    $("#TROUBLESHOOTNSS").toggle();
+  });
+});
+//Troubleshooting picutre/sound issues
+$(document).ready(function () {
+  $("#troublepicture").click(function () {
+    $("#pcturhd").hide();
+    $("#picturetroubleshooting").toggle();
   });
 });
 $(document).ready(function () {
-  $("#troubleShootingHD3").click(function () {
-    $("#TROUBLESHOOTHD").toggle();
+  $("#troubleShootingrecordings").click(function () {
+    $("#TROUBLESHOOTRECORDINGS").toggle();
   });
 });
 $(document).ready(function () {
@@ -120,7 +157,18 @@ $(document).ready(function () {
     $("#TROUBLESHOOTHD").toggle();
   });
 });
-
+//HD equipment/ondemand issue
+$(document).ready(function () {
+  $("#hrdwarehd").click(function () {
+    $("#equipHD").toggle();
+  });
+});
+$(document).ready(function () {
+  $("#troubleShootingequip").click(function () {
+    $("#equipHD").hide();
+    $("#TROUBLESHOOTEQUIP").toggle();
+  });
+});
 //Broadband 
 $(document).ready(function () {
   $("#BBbtn").click(function () {
@@ -329,7 +377,7 @@ $(document).ready(function () {
   $('.notes').click(function () {
     var text = "";
     $('.notes:checked').each(function () {
-      text += $(this).val() + ',';
+      text += $(this).val() + '.\n';
     });
     text = text.substring(0, text.length - 1);
     $('#selectedtext').val(text);
@@ -342,6 +390,7 @@ var textarea = document.querySelector('#selectedtext');
 
 input.addEventListener('click', function () {
   textarea.value = '';
+
 }, false);
 
 function copytxt() {
