@@ -66,10 +66,22 @@ $(document).ready(function () {
     $("#hardwareissuesq").toggle();
   });
 });
-//Sky Q equipmwnt issues
+//Sky Q equipment issues
 $(document).ready(function () {
   $("#Qtroublesht4").click(function () {
     $("#TROUBLESHOOTEQEQUIP").toggle();
+  });
+});
+
+//Sky Q connectivity issues
+$(document).ready(function () {
+  $("#Qtroubleshtconnectivtool").click(function () {
+    $("#cunnectivitytool").toggle();
+  });
+});
+$(document).ready(function () {
+  $("#connectivity").click(function () {
+    $("#TROUBLESHOOTQconnectivity").toggle();
   });
 });
 
